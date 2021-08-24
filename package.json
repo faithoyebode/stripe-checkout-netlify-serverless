@@ -1,0 +1,13 @@
+{
+  "name": "stripe-checkout-netlify-serverless",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Faith Oyebode <47439363+faithoyebode@users.noreply.github.com>",
+  "license": "MIT",
+  "scripts": {
+    "netlify": "netlify"
+  },
+  "devDependencies": {
+    "netlify-cli": "^6.7.5"
+  }
+}
