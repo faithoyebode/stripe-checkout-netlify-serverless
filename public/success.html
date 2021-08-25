@@ -30,8 +30,7 @@
 
     messageText.style.display="none";
 
-    const triggerEmail = async () => {
-        
+    async function triggerEmail(){
         const params = new URLSearchParams(window.location.search);
 
         const session_id = params.get('session_id');
@@ -48,13 +47,11 @@
             body: JSON.stringify(data),
         }).then((res) => res.json());
 
-        console.log(response);
-
         if(response.customer.name){
             loading="false"
             messageText.style.display="block";
             loader.style.display="none";
-        }
+        };
 
     };
 
