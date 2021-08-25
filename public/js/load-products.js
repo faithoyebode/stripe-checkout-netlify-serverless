@@ -1,3 +1,5 @@
+import { handleFormSubmission } from './stripe-purchase.js';
+
 const createProductFromTemplate = (item) => {
     const template = document.querySelector('#product');
     const product = template.content.cloneNode(true);
@@ -13,6 +15,9 @@ const createProductFromTemplate = (item) => {
     const img = product.querySelector('img');
     img.src = item.image;
     img.alt = item.name;
+
+    const form = product.querySelector('form');
+    form.addEventListener('submit', handleFormSubmission);
 
     return product;
 };
