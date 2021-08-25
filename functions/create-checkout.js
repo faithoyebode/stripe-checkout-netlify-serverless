@@ -12,7 +12,7 @@ exports.handler = async (event) => {
         shipping_address_collection: {
         allowed_countries: ['US', 'CA'],
         },
-        success_url: `${process.env.URL}/success.html`,
+        success_url: `${process.env.URL}/success.html?session_id={CHECKOUT_SESSION_ID}`,
         cancel_url: process.env.URL,
         line_items: [
         {
@@ -25,8 +25,6 @@ exports.handler = async (event) => {
         },
         ],
     });
-
-    console.log(session);
 
     return {
         statusCode: 200,
