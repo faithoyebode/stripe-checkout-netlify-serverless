@@ -13,9 +13,52 @@
     </header>
 
     <main>
-        <h1>Purchase successful!</h1>
-        <p>Your test transaction went through! Technology is neat</p>
+        <div class="message">
+            <h1>Purchase successful!</h1>
+            <p>Your test transaction went through! Technology is neat</p>
+        </div>
+        <div class="loading">
+            Loading....
+        </div>
     </main>
 
+    <script>
+
+    let loading="true";
+    const messageText = document.querySelector('.message');
+    const loader = document.querySelector('.loading');
+
+    messageText.style.display="none";
+
+    const triggerEmail = async () => {
+        
+        const params = new URLSearchParams(window.location.search);
+
+        const session_id = params.get('session_id');
+
+        const data = {
+            session_id: session_id,
+        };
+
+        const response = await fetch('/.netlify/functions/send-email', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        }).then((res) => res.json());
+
+        console.log(response);
+
+        if(response.customer.name){
+            loading="false"
+            messageText.style.display="block";
+            loader.style.display="none";
+        }
+
+    };
+
+    triggerEmail();
+    </script>
 </body>
 </html>
