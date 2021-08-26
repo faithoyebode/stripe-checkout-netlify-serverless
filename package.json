@@ -11,6 +11,7 @@
     "netlify-cli": "^6.7.5"
   },
   "dependencies": {
+    "mjml": "^4.10.2",
     "nodemailer": "^6.6.3"
   }
 }

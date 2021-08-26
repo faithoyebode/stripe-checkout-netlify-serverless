@@ -1,24 +1,27 @@
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 const nodemailer = require('nodemailer');
+const fs = require('fs');
+const path = require('path');
+const messageBody = fs.readFileSync(path.resolve(__dirname, '../public/email.html'), 'utf8')
 
 exports.handler = async (event) => {
     const { session_id } = JSON.parse(event.body);
     const session = await stripe.checkout.sessions.retrieve(session_id);
     const customer = await stripe.customers.retrieve(session.customer);
 
-    const messageBody = async () => {
-        const html = `
-            <DOCTYPE html>
-            <html>
-                <head><title>Greetings</title></head>
-                <body>
-                    <p>Your test transaction went through! Technology is neat</p>    
-                </body>
-            </html>
-        `;
+    // const messageBody = async () => {
+    //     const html = `
+    //         <DOCTYPE html>
+    //         <html>
+    //             <head><title>Greetings</title></head>
+    //             <body>
+    //                 <p>Your test transaction went through! Technology is neat</p>    
+    //             </body>
+    //         </html>
+    //     `;
 
-        return html;
-    }
+    //     return html;
+    // }
 
     const sendEmail = async (options) => {
         const transporter = nodemailer.createTransport({
@@ -34,7 +37,13 @@ exports.handler = async (event) => {
             from: `${process.env.SENDER_NAME} <${process.env.SENDER_EMAIL}>`,
             to: options.email,
             subject: options.subject,
+            attachments: [{
+                filename: options.imageFile,
+                path: options.imagePath,
+                cid: options.imageName
+            }],
             html: options.message,
+            
         };
 
         await transporter.sendMail(message);
@@ -44,7 +53,10 @@ exports.handler = async (event) => {
         const result = await sendEmail({
             email: customer.email,
             subject: "Purchase successful!",
-            message: await messageBody()
+            message: messageBody,
+            imageFile: "audal-icon.png",
+            imageName: "audal-icon",
+            imagePath: __dirname + '../../public/images/audal-icon.png'
         });
 
         return {

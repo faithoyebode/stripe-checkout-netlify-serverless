@@ -1,0 +1,50 @@
+<mjml>
+<mj-head>
+    <mj-style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        .header{
+            box-shadow: 0 4px 4px -2px rgba(0,0,0,.2);
+            height: 70px;
+            position: relative;
+            z-index: 99;
+        }
+
+        .logo img{
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+            width: auto !important;
+            height: 60px !important;
+        }
+
+        .msg-body{
+            color: #ffffff;
+        }
+        .msg-body div{
+            top: 0;
+            height: 70vh !important;
+            color: #ffffff !important;
+        }
+
+    </mj-style>
+</mj-head>
+  <mj-body  background-color="#d6dde5">
+    <mj-section background-color="#ffffff" css-class="header">
+      <mj-column>
+        <mj-image  css-class="logo" src="./public/images/audal-icon.png"></mj-image>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#000000" padding-top="50px" css-class="msg-body">
+        <mj-column>
+        <mj-text font-size="20px" font-family="helvetica">
+            Your test transaction went through! Technology is neat
+        </mj-text>
+        </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>
