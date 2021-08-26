@@ -37,13 +37,7 @@ exports.handler = async (event) => {
             from: `${process.env.SENDER_NAME} <${process.env.SENDER_EMAIL}>`,
             to: options.email,
             subject: options.subject,
-            attachments: [{
-                filename: options.imageFile,
-                path: options.imagePath,
-                cid: options.imageName
-            }],
-            html: options.message,
-            
+            html: options.message
         };
 
         await transporter.sendMail(message);
@@ -54,9 +48,6 @@ exports.handler = async (event) => {
             email: customer.email,
             subject: "Purchase successful!",
             message: messageBody,
-            imageFile: "audal-icon.png",
-            imageName: "audal-icon",
-            imagePath: __dirname + '../../public/images/audal-icon.png'
         });
 
         return {

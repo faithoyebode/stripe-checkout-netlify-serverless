@@ -1,50 +1,46 @@
-<mjml>
-<mj-head>
-    <mj-style>
-        *{
-            box-sizing: border-box;
-            padding: 0;
-            margin: 0;
-        }
-        .header{
-            box-shadow: 0 4px 4px -2px rgba(0,0,0,.2);
-            height: 70px;
-            position: relative;
-            z-index: 99;
-        }
-
-        .logo img{
-            display: inline-block;
-            margin-left: auto;
-            margin-right: auto;
-            width: auto !important;
-            height: 60px !important;
-        }
-
-        .msg-body{
-            color: #ffffff;
-        }
-        .msg-body div{
-            top: 0;
-            height: 70vh !important;
-            color: #ffffff !important;
-        }
-
-    </mj-style>
-</mj-head>
-  <mj-body  background-color="#d6dde5">
-    <mj-section background-color="#ffffff" css-class="header">
-      <mj-column>
-        <mj-image  css-class="logo" src="./public/images/audal-icon.png"></mj-image>
+<mjml owa="desktop" version="4.10.1">
+  <mj-head>
+    <mj-preview></mj-preview>
+  </mj-head>
+  <mj-body background-color="#F4F4F4" color="#55575D" font-family="Arial, sans-serif">
+    <mj-section background-color="#ffffff" background-repeat="repeat" background-size="auto" padding-bottom="0px" padding-top="0px" padding="0 0 0 0" text-align="center" vertical-align="top">
+      <mj-column padding="0 0 0 0" vertical-align="top">
+        <mj-image align="center" alt="Audal logo" border-radius="px" border="none" height="auto" href="" padding-bottom="15px" padding-left="25px" padding-right="25px" padding-top="15px" padding="15px 25px 15px 25px" src="https://005lu.mjt.lu/img/005lu/b/0s1w/rv2v.png" target="_blank" title="" width="100px"></mj-image>
       </mj-column>
     </mj-section>
-
-    <mj-section background-color="#000000" padding-top="50px" css-class="msg-body">
-        <mj-column>
-        <mj-text font-size="20px" font-family="helvetica">
-            Your test transaction went through! Technology is neat
+    <mj-section background-repeat="repeat" background-size="cover" background-url="http://191n.mj.am/img/191n/3s/xog.jpg" padding-bottom="56px" padding-top="87px" padding="0 0 0 0" text-align="center" vertical-align="top">
+      <mj-column padding="0 0 0 0" vertical-align="top">
+        <mj-text align="left" color="#000000" font-family="Arial, sans-serif" font-size="13px" letter-spacing="normal" padding-bottom="10px" padding-left="25px" padding-right="25px" padding-top="10px" padding="0 0 0 0">
+          <p class="text-build-content" style="text-align: center; margin: 10px 0; margin-top: 10px; margin-bottom: 10px;" data-testid="eevPwsDd5L"><span style="color:#ffffff;font-family:Arial;font-size:46px;line-height:35px;">Purchase Successful!</span></p>
         </mj-text>
-        </mj-column>
+        <mj-button align="center" background-color="#000000" border-radius="0px" border="none" color="#ffffff" font-family="Arial, sans-serif" font-size="13px" font-weight="normal" href="https://faith-stripe-checkout-netlify-serverless.netlify.app/" inner-padding="15px 25px 15px 25px" padding-bottom="10px" padding-left="25px" padding-right="25px" padding-top="10px" padding="10px 25px 10px 25px" text-decoration="none" text-transform="none" vertical-align="middle">
+          <span style="background-color:#000000;color:#ffffff;font-family:Arial;font-size:16px;"><b>SHOP NOW</b></span>
+        </mj-button>
+      </mj-column>
+    </mj-section>
+    <mj-section background-color="#ffffff" background-repeat="repeat" background-size="auto" padding-bottom="0px" padding-top="0px" padding="0 0 0 0" text-align="center" vertical-align="top">
+      <mj-column padding="0 0 0 0" vertical-align="top">
+        <mj-text align="left" color="#000000" font-family="Arial, sans-serif" font-size="21px" letter-spacing="normal" padding-bottom="10px" padding-left="25px" padding-right="25px" padding-top="10px" padding="0 0 0 0">
+          <p class="text-build-content" style="text-align: center; margin: 10px 0; margin-top: 10px;" data-testid="Lk19ihFhYot"><span style="color:#55575D;font-family:Arial;font-size:21px;line-height:22px;">Your test transaction went through!&nbsp;</span></p><p class="text-build-content" style="text-align: center; margin: 10px 0; margin-bottom: 10px;" data-testid="Lk19ihFhYot"><span style="color:#55575D;font-family:Arial;font-size:21px;line-height:22px;"><i>Technology is neat</i></span></p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section background-color="#000" background-repeat="repeat" padding-bottom="10px" padding-left="0px" padding-right="0px" padding-top="10px" padding="10px 0px 10px 0px" text-align="center" vertical-align="top">
+      <mj-column padding="0 0 0 0" vertical-align="top">
+        <mj-image align="center" alt="TechShop logo" border-radius="px" border="none" height="auto" href="" padding-bottom="0px" padding-left="0px" padding-right="0px" padding-top="5px" padding="5px 0px 0px 0px" src="https://005lu.mjt.lu/img/005lu/b/0s1w/rv2j.png" target="_blank" title="" width="50px"></mj-image>
+      </mj-column>
+      <mj-column padding="0 0 0 0" vertical-align="top">
+        <mj-text align="left" color="#000000" font-family="Arial, sans-serif" font-size="13px" letter-spacing="normal" padding-bottom="10px" padding-left="25px" padding-right="25px" padding-top="15px" padding="0 0 0 0">
+          <p class="text-build-content" style="text-align: center; margin: 10px 0; margin-top: 10px; margin-bottom: 10px;" data-testid="YsAZNBSXeBP"><span style="color:#ffffff;">(c) Audal Labs</span></p>
+        </mj-text>
+      </mj-column>
+      <mj-column padding="0 0 0 0" vertical-align="top">
+        <mj-social align="center" border-radius="50%" font-family="Ubuntu, Helvetica, Arial, sans-serif" font-size="13px" icon-padding="0px 0px 0px 0px" icon-size="25" line-height="22px" mode="horizontal" padding-left="25px" padding-right="25px" padding="10px 25px 10px 25px" text-decoration="none" text-mode="false">
+          <mj-social-element background-color="#3B5998" href="[[SHORT_PERMALINK]]" name="facebook" src="https://www.mailjet.com/images/theme/v1/icons/ico-social/facebook.png"></mj-social-element>
+          <mj-social-element background-color="#1DA1F2" href="[[SHORT_PERMALINK]]" name="twitter" src="https://www.mailjet.com/images/theme/v1/icons/ico-social/twitter.png"></mj-social-element>
+          <mj-social-element background-color="#405DE6" href="" name="instagram-noshare" src="https://www.mailjet.com/images/theme/v1/icons/ico-social/instagram.png"></mj-social-element>
+        </mj-social>
+      </mj-column>
     </mj-section>
   </mj-body>
 </mjml>
